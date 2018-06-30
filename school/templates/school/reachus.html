@@ -1,0 +1,27 @@
+{% extends "school/base.html" %}
+{% block title %}Reach Us{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="info" style="height: 0; clear: both">
+    <br>
+    <br>
+    <p class='texty'><h1>Contact Us:</h1>
+    <strong>Phone :</strong> +91-9911121548 <br>
+    <strong>Email :</strong> gmssssfbd@gmail.com <br>
+    <strong>Address :</strong> Sector 55,Faridabad</p>
+  </div>
+  <div id="googleMap" class="info" style="width:600px;height:300px; border:1px solid white; border-radius:300px"></div>
+</div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(28.342923, 77.296735),
+    zoom:17,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChckx9BXa_nI4whu8BnAv_BtDTzyrAyNo&callback=myMap"></script>
+{% endblock  %}

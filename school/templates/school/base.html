@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.slideshow').cycle({
+		fx: 'turnDown' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+});
+</script>
+<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container main">
+      <div class="jumbotron header sm" id = 'aj' style="margin-bottom:2px"align='center'>
+        <img src="/media/School Logo.jpg" style="border-radius:63px;"height="126px" width = "126px" alt="" align="left">
+        <h3 style="padding-top: 20px;">GOVT. MODEL SANSKRITI SENIOR SECONDARY SCHOOL</h3>
+        <h5 style="padding-top: 5px;">SECTOR 55, FARIDABAD</h5>
+      </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:about'%}">Home</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:news_list'%}">News</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:hof'%}">Hall of Fame</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:staff'%}">Staff</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:album_list'%}">Gallery</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="{%url 'school:reachus'%}">Reach Us</a></li>
+        </ul>
+      </div>
+    </nav>
+      {% block content %}
+      {% endblock %}
+    </div>
+    <script type="text/javascript" src="{% static 'js/java.js' %}">
+    </script>
+      </body>
+
+</html>

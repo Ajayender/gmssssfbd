@@ -1,0 +1,27 @@
+{% extends "school/base.html" %}
+{% block title %}Gallery : {{album_details.album_title}}{% endblock %}
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+  {% for album in album_details.photos.all %}
+  <div class="mySlides" style="align:center;"  align='center'>
+            <img src="{{album.photo.url}}"style="width:75%;">
+  </div>
+  {% endfor %}
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <br>
+  <div class="row">
+  {% for album in album_details.photos.all %}
+  <div class="column">
+          <img class="demo cursor" onclick="currentSlide({{forloop.counter}})" src="{{album.photo.url}}"style="width:100%">
+  </div>
+
+  {% endfor %}
+  </div>
+</div>
+</div>
+
+
+{% endblock  %}

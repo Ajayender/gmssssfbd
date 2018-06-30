@@ -1,0 +1,52 @@
+{% extends "school/base.html" %}
+{% block title %}AboutUs{% endblock %}
+{% block content %}
+<div class="slideshow container" style="margin-bottom:17.5%;margin-top:2px">
+  {% for img in images %}
+    <img src="{{img.photo.url}}"height="199%" width="100%" style="border-radius:2px"/>
+  {% endfor %}
+</div>
+
+<div class="jumbotron small header" align= 'center'>
+  <h3>Vision</h3>
+</div>
+<p class = 'texty'>Our Vision is to be recognized as a Centre of Excellence in the field of education by meeting the challenges of the present & the future. Our aim through “quality education to all” is to unlock the students’ potential, in still determination & self confidence through constant effort & encouragement and to grow rapidly by establishing a strong tradition of high quality, reliability and free education to students from all sections of the society.</p>
+
+
+<div class="jumbotron small header" align= 'center'>
+  <h3>From The Principal's Desk</h3>
+</div>
+<img id="prin" src="/media/Princi.jpg" align="left" height="150px" style="margin-bottom:20px;border:2px outset #f5f5f5 ;margin-right:25px "alt="">
+<p class='texty'>Our mission is ‘True to education’. Education is viewed with a holistic approach. Our endeavor is to :<br>
+
+1. Help students develop to their fullest potential, physically, mentally, emotionally, psychologically and spiritually.<br>
+2. Promote the development of basic skills, positive attitude, analytical thinking and inquiry based learning.<br>
+3. Imbibe in them the quality of appreciation and respect for cultural diversity.<br><br>
+<em><strong>-Satender Kr. Sorout</strong></em></p>
+
+<div class="jumbotron small header" align= 'center'>
+  <h3>Other Links</h3>
+</div>
+<table align=center style="border-collapse:separate;border-spacing:15px">
+  <tr>
+    <td valign="top">
+      <ul>
+        <li><a href="https://drive.google.com/folderview?id=1o4m2Why3tpao5eeQKzHcLmrTnUE1imM1">Notices</li>
+          <li><a href="http://www.bseh.org.in/">Board of School Education, Haryana</a></li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul>
+        <li><a href="https://drive.google.com/folderview?id=1K8IoQXmbnrESIZB19kkDTO6cnfrJ_sZ5">School in News </a></li>
+        <li><a href="http://harprathmik.gov.in/">Department of Elementary Education, Haryana</a></li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul>
+        <li><a href="http://www.schooleducationharyana.gov.in/">Director of School Education, Haryana</a></li>
+        <li><a href="http://bsehexam.org/">Results : Board of School Education, Haryana</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+{% endblock  %}

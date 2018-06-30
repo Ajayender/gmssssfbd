@@ -1,0 +1,41 @@
+{% extends "school/base.html" %}
+{% block title %}Staff{% endblock %}
+{% block content %}
+<div class="container main texty">
+  {% for emp in staff %}
+    {% if emp.post == 'PGT' %}
+      <div class="stf">
+          <img src="{{emp.profile_photo.url}}" alt="Mountains" width="300" height="200">
+        <center><div class="desc texty">
+          <h7>{{emp.name}}</h7><br>
+          <h7>(P.G.T. {{emp.subject}})</h7>
+        </div></center>
+      </div>
+    {% endif %}
+  {% endfor %}
+  {% for emp in staff %}
+    {% if emp.post == 'TGT' %}
+      <div class="stf">
+          <img src="{{emp.profile_photo.url}}" alt="Mountains" width="300" height="200">
+        <center><div class="desc">
+          <h7>{{emp.name}}</h7><br>
+          <h7>(T.G.T. {{emp.subject}})</h7>
+        </div></center>
+      </div>
+    {% endif %}
+  {% endfor %}
+  {% for emp in staff %}
+    {% if emp.post == 'JBT' %}
+      <div class="stf">
+          <img src="{{emp.profile_photo.url}}" alt="Mountains" width="300" height="200">
+        <center><div class="desc">
+          <h7>{{emp.name}}</h7>
+          <h7>(J.B.T. {{emp.subject}})</h7>
+        </div></center>
+      </div>
+    {% endif %}
+  {% endfor %}
+
+</div>
+
+{% endblock  %}

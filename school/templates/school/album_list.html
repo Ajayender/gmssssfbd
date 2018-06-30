@@ -1,0 +1,16 @@
+{% extends "school/base.html" %}
+{% block title %}Gallery{% endblock %}
+{% block content %}
+<div class="main">
+  {% for album in album_list %}
+      <div class="gallery">
+        <a href="{% url 'school:album_details' album.id%}">
+          <img src="{{album.album_logo.url}}" alt="Mountains" height="500px">
+        </a>
+        <div class="desc texty">{{album.album_title}}</div>
+        </a>
+      </div>
+  {% endfor %}
+</div>
+
+{% endblock  %}

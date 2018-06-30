@@ -1,0 +1,21 @@
+{% extends "school/base.html" %}
+{% block title %}News{% endblock %}
+{% block content %}
+<div class="jumbotron">
+<div class="container" align='center'>
+  <center><h1 class='news'>{{news_details.title}}</h1><pre>                                           date:{{news_details.date|date:'d-m-Y'}}</pre></center>
+  {% if news_details.photo %}
+  <img class = 'newsimg' src="{{news_details.photo.url}}" width="40%" align = 'center' alt="">
+  <figcaption>{{news_details.caption}}'</figcaption>
+  {% endif %}
+</div>
+  <p class='texty'><br>{{news_details.desc}}<br></p>
+  {% if news_details.pdf %}
+  <a target="_blank" href="{{ news_details.pdf.url }}">
+      <button type="button" class="btn btn-success btn-xs">
+          Attachment
+      </button>
+  </a>
+  {% endif %}
+</div>
+{% endblock  %}

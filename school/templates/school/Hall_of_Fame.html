@@ -1,0 +1,21 @@
+{% extends "school/base.html" %}
+{% block title %}Hall Of Fame{% endblock %}
+{% block content %}
+<div class="container">
+  {% for curr in hof %}
+      <div class="gallery_hof" >
+        <div class="container" align='center'>
+          <img src="{{curr.profile_photo.url}}" alt="Mountains" width="300" height="200" align='center'>
+        </div>
+        <div class="desc_hof">
+          <center><u><h4>{{curr.name}}</h4></u></center>
+          <p class='texty'>{{curr.details}}</p>
+          {% if curr.link %}
+          <h6>Link : <a href="{{curr.link}}">Click here for more information on this</a></h6>
+          {% endif %}
+        </div>
+      </div>
+  {% endfor %}
+</div>
+
+{% endblock  %}
