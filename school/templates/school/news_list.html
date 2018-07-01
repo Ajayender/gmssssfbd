@@ -3,9 +3,9 @@
 {% block content %}
 <ul class="jumbotron">
   {% for post in news_list %}
-          <li><h2 class="texty"><a href="{% url 'school:news_details' pk=post.pk%}">{{ post.title }}</a></h2>
+          <li><h3 class="texty"><a href="{% url 'school:news_details' pk=post.pk%}">{{ post.title }}</a></h3>
             {% if post.date %}
-                    <p class="date texty">Created: {{ post.date|date:'d-m-Y' }}</p>
+                    <p class="date texty" style="font-size:1em">Created: {{ post.date|date:'d-m-Y' }}</p>
             {% endif %}
           <hr>
           </li>

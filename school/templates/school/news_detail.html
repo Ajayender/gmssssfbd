@@ -3,7 +3,7 @@
 {% block content %}
 <div class="jumbotron">
 <div class="container" align='center'>
-  <center><h1 class='news'>{{news_details.title}}</h1></center>
+  <center><h2 class='news'>{{news_details.title}}</h2></center>
   {% if news_details.photo %}
   <img class = 'newsimg' src="{{news_details.photo.url}}" width="40%" align = 'center' alt="">
   <figcaption>{{news_details.caption}}</figcaption>
