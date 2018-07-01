@@ -26,7 +26,7 @@ SECRET_KEY = 'fpob&rj^@kj5ii91n4o^j32vp!!m((m0v-r3er9y^+7_25v9x4'
 DEBUG = True
 
 
-
+ALLOWED_HOSTS = ['https://dashboard.heroku.com/apps/gmssssfbd']
 # Application definition
 
 INSTALLED_APPS = [
@@ -117,7 +117,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR,'school/static')
+# Static files (CSS, JavaScript, Images)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'school/static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
