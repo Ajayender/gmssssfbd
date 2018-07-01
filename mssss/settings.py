@@ -26,7 +26,7 @@ SECRET_KEY = 'fpob&rj^@kj5ii91n4o^j32vp!!m((m0v-r3er9y^+7_25v9x4'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['https://dashboard.heroku.com/apps/gmssssfbd']
+ALLOWED_HOSTS = ['gmssssfbd.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
