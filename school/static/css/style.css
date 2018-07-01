@@ -7,6 +7,11 @@
     margin: 0px;
 }
 
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+
 html{
   min-height: 100%;
 }
