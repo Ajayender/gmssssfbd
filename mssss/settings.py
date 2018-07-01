@@ -67,16 +67,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'mssss.wsgi.application'
-
+WSGI_APPLICATION = 'website.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'd7bp76v8e2bhk7',
+        'USER': 'rxeruopkgtnrcp',
+        'PASSWORD': 'ce6ef25ea2e4cbf56012ac763b89bc341fd11da6f9c2f96919ccf608c6d29082',
+        'HOST': 'ec2-23-21-236-249.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
