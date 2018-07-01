@@ -46,6 +46,9 @@ body {
   padding-top: 0px;
   background-color:transparent ;
 }
+.container{
+  background-color: transparent;
+}
 .texty{
   font-family: 'Work Sans', sans-serif;
 }
@@ -268,7 +271,7 @@ div.desc {
 }
 
 .newsimg{
-  border : 2px ridge coral;
+  border : 4px ridge white;
 }
 
 div.gallery_hof {
